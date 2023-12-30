@@ -8,6 +8,10 @@
     <!-- Add this link to include the Slick slider CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
     
+    <!-- Add Google Maps API script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVi0TbvN06i9Btl2PnpBqTg-Glscy0joI&callback=initMap" async defer></script>
+
+
     <!-- Add these script tags directly in the head section of your HTML -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" loading="lazy"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" loading="lazy"></script>
@@ -19,9 +23,21 @@
   var stripe = Stripe('pk_test_51OR7MgGK5ROpFNQVh2Yhv0gm1V4ypesV6uBGFRUaKRGjZgpDkFgcGjVOYfQhc8FSVcPN7qHtdFGrSI2ImbfCVHiD00eEQBdRNK');
 </script>
 
-    <!-- Add Google Maps API script -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVi0TbvN06i9Btl2PnpBqTg-Glscy0joI&callback=initMap"></script>
+<script src="script.js"></script>
 
+<script>
+    // Function to be called when the Google Maps API is loaded
+    function initializeMap() {
+        // Ensure that the google.maps object is defined before using it
+        if (typeof google !== 'undefined' && typeof google.maps !== 'undefined') {
+            // Call your initMap function
+            initMap();
+        } else {
+            console.error('Google Maps API failed to load.');
+        }
+    }
+</script>
+    
     <!-- Add a CSS class for the Google Map container -->
     <style>
         #map {
@@ -216,7 +232,7 @@
 
 
 
-    <script src="script.js"></script>
+    
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVi0TbvN06i9Btl2PnpBqTg-Glscy0joI&callback=initMap" async defer>
         function initMap() {
             var mapOptions = {
