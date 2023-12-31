@@ -55,6 +55,9 @@ nav a:focus ,#about button {
     color: #fff;
 }
 
+#home .home h2,#home .home p {
+    color: #0A368F;
+}
 
 #burgerMenu {
     display: none;
@@ -80,8 +83,10 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    /* color: #333; */
+    color: #0A368F;
     font-weight: bold;
+    font-size: large;
 }
 
 hr {
@@ -155,6 +160,36 @@ color: #126FB5;
     cursor: pointer;
 }
 
+#about a button {
+    background-color: #0A368F;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 12px 25px; /* Adjust the padding to increase the button size */
+    font-size: 18px; /* Adjust the font size for better visibility */
+    border: none;
+    border-radius: 5px;
+    
+}
+
+#submit {
+    background-color: #0A368F;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 12px 25px; /* Adjust the padding to increase the button size */
+    font-size: 18px; /* Adjust the font size for better visibility */
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+/* Optional: Add a hover effect for better user interaction */
+#button:hover {
+    background-color: #126FB5;
+}
+
+
+
+
 /* Add a new style for the video container */
 .video-container {
     position: relative;
@@ -172,7 +207,7 @@ color: #126FB5;
 }
 
 #news-feeds h2 {
-    color: #38B6FF;
+    color: #126FB5;
 }
 
 #map {
@@ -218,10 +253,6 @@ form input[type="submit"] {
     width: 20%;
 }
 
-
-.footer .join {
-   
-}
 
 .footer .facebook {
     background-color: #FF5436;
