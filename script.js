@@ -18,17 +18,16 @@ function toggleMenuKeyPress(event) {
 }
 
 // Close the burger menu when a navigation link is clicked or pressed
+function closeMenu() {
+    var navMenu = document.querySelector('.nav ul');
+    navMenu.classList.remove('show');
+}
+
 document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', function () {
-        // Close the navigation menu
-        var navMenu = document.querySelector('.nav ul');
-        navMenu.classList.remove('show');
-    });
+    link.addEventListener('click', closeMenu);
     link.addEventListener('keypress', function (event) {
-        // Close the navigation menu when 'Enter' key is pressed
         if (event.key === 'Enter') {
-            var navMenu = document.querySelector('.nav ul');
-            navMenu.classList.remove('show');
+            closeMenu();
         }
     });
 });
@@ -49,11 +48,7 @@ card.mount('#card-element');
 card.addEventListener('change', function (event) {
     // Display validation errors or clear the error message
     var displayError = document.getElementById('card-errors');
-    if (event.error) {
-        displayError.textContent = event.error.message;
-    } else {
-        displayError.textContent = '';
-    }
+    displayError.textContent = event.error ? event.error.message : '';
 });
 
 // Form validation for donation form
@@ -66,19 +61,24 @@ document.getElementById('donationForm').addEventListener('submit', function (e) 
 
     // Create a token and handle the result
     stripe.createToken(cardElement).then(function (result) {
-        if (result.error) {
-            // Display error message if token creation fails
-            var errorElement = document.getElementById('card-errors');
-            errorElement.textContent = result.error.message;
-        } else {
-            // Process the token on the server (replace this with actual server-side processing)
-            alert('Thank you for your donation of £' + amount + '!');
-
-            // Reset the form
-            document.getElementById('donationForm').reset();
-        }
+        handleTokenResult(result, amount);
     });
 });
+
+// Function to handle the result of creating a token
+function handleTokenResult(result, amount) {
+    if (result.error) {
+        // Display error message if token creation fails
+        var errorElement = document.getElementById('card-errors');
+        errorElement.textContent = result.error.message;
+    } else {
+        // Process the token on the server (replace this with actual server-side processing)
+        alert('Thank you for your donation of £' + amount + '!');
+
+        // Reset the form
+        document.getElementById('donationForm').reset();
+    }
+}
 
 // Function to set the donation amount when clicking on suggestion buttons
 function setAmount(amount) {
@@ -127,30 +127,6 @@ function toggleMenu() {
     var navMenu = document.querySelector('.nav ul');
     navMenu.classList.toggle('show');
 }
-
-// Close the burger menu when a navigation link is clicked
-document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', function () {
-        var navMenu = document.querySelector('.nav ul');
-        navMenu.classList.remove('show');
-    });
-});
-
-// Close the burger menu when a navigation link is clicked or pressed
-document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', function () {
-        // Close the navigation menu
-        var navMenu = document.querySelector('.nav ul');
-        navMenu.classList.remove('show');
-    });
-    link.addEventListener('keypress', function (event) {
-        // Close the navigation menu when 'Enter' key is pressed
-        if (event.key === 'Enter') {
-            var navMenu = document.querySelector('.nav ul');
-            navMenu.classList.remove('show');
-        }
-    });
-});
 
 // Initialize Slick slider for services
 $('.service-slider').slick({
