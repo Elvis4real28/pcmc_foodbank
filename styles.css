@@ -219,6 +219,25 @@ form input[type="submit"] {
 }
 
 
+.footer .join {
+   
+}
+
+.footer .facebook {
+    background-color: #FF5436;
+    color: #FFFFFF;
+}
+
+.footer .instagram {
+    background-color: #3B5998;
+    color: #FFFFFF;
+}
+
+.footer .twitter {
+    background-color: #55ACEE;
+    color: #FFFFFF;
+}
+
 .footer {
     background-color: #0A368F;
     color: #fff;
@@ -251,6 +270,8 @@ footer .oursections a{
 
     color: #fff;
 }
+
+
 
 /* Accessibility Improvements */
 header, nav, section, footer {
