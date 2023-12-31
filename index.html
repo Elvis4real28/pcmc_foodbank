@@ -20,7 +20,7 @@
 </script>
 
     <!-- Add Google Maps API script -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVi0TbvN06i9Btl2PnpBqTg-Glscy0joI&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVi0TbvN06i9Btl2PnpBqTg-Glscy0joI&initMap=initMap"></script>
 
     <!-- Add a CSS class for the Google Map container -->
     <style>
@@ -31,7 +31,7 @@
         }
     </style>
 
-    <title>UK Food Bank</title>
+    <title>PCMC Food Aid Partnership</title>
 </head>
 
 <body>
@@ -103,11 +103,11 @@
 
     <section id="donate">
         <div>
-         <img src="./donate to us.png" alt="Donate to Us">   
+            <img src="./donate to us.png" alt="Donate to Us">
         </div>
         <div>
-        <p>Support our cause by making a donation.</p>
-        <form id="donationForm">
+            <p>Support our cause by making a donation.</p>
+            <form id="donationForm">
             <label for="amount">Select or Enter Amount:</label>
             <div class="amount-buttons">
                 <button type="button" onclick="setAmount(20)">£20</button>
@@ -214,19 +214,18 @@
 
 
     <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVi0TbvN06i9Btl2PnpBqTg-Glscy0joI&callback=initMap" async defer>
+    <script>
         function initMap() {
             var mapOptions = {
-                center: { lat: 51.5272, lng: -0.2267 }, // Adjust the coordinates as needed
-                zoom: 14, // Adjust the zoom level as needed
+                center: { lat: 51.5272, lng: -0.2267 },
+                zoom: 14,
             };
             var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-            // Add a marker for the location
+    
             var marker = new google.maps.Marker({
-                position: { lat: 51.5272, lng: -0.2267 }, // Adjust the coordinates as needed
+                position: { lat: 51.5272, lng: -0.2267 },
                 map: map,
-                title: 'UK Food Bank'
+                title: 'PCMC Food Aid Partnership'
             });
         }
     </script>
