@@ -3,9 +3,195 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+
+    <style>
+        /* Add your custom styles here */
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav a:hover {
+            color: #e44d26;
+        }
+
+        main {
+            padding-top: 70px;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        section h2 {
+            color: #e44d26;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #e44d26;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #333;
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #e44d26;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer button:hover {
+            background-color: #333;
+        }
+
+        @media only screen and (max-width: 600px) {
+            header {
+                padding: 10px;
+                justify-content: space-between;
+            }
+
+            #logo img {
+                width: 60px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                background-color: #0A368F;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                display: none;
+            }
+
+            .nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .service-slider {
+                max-width: 100%;
+            }
+
+            .service-images img {
+                width: 100%;
+                height: auto;
+            }
+
+            #services h2 {
+                width: 100%; /* Update to 100% for responsiveness */
+                border-radius: 0; /* Remove border-radius for small screens */
+            }
+
+            .service-slider {
+                max-width: 100%; /* Update to 100% for responsiveness */
+            }
+
+            .service-images a {
+                flex-basis: 100%; /* Full width for images on small screens */
+            }
+
+            .cta-button {
+                width: 100%; /* Make CTA buttons full width on smaller screens */
+                margin-top: 10px; /* Add margin for better spacing */
+            }
+        }
+
+    </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" loading="lazy"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" loading="lazy"></script>
@@ -36,8 +222,8 @@
                 <li tabindex="0" role="menuitem" aria-current="page"><a href="#about">About Us</a></li>
                 <li tabindex="0" role="menuitem" aria-current="page"><a href="#services">Services</a></li>
                 <li tabindex="0" role="menuitem" aria-current="page"><a href="./contact us.html">Contact Us</a></li>
-                <li tabindex="0" role="menuitem" aria-current="page"><a href="#donate">Donate</a></li>
-                <li tabindex="0" role="menuitem" aria-current="page"><a href="#volunteer">Volunteer</a></li>
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="#donate" class="cta-button">Donate</a></li>
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="#volunteer" class="cta-button">Volunteer</a></li>
             </ul>
         </nav>
     </header>
@@ -45,112 +231,110 @@
 
     <main>
         <section id="home"
-        style="background-image: url('https://images.squarespace-cdn.com/content/v1/59bba9cd2278e70b1981931d/1522186133425-ZLV12EB54OFSXCA3IAE1/South-London-Stories-The-Foodbank-James-Hopkirk-002.jpg'); background-size: cover; color: #fff;">
-        <div class="home">
-            <h2>FOOD PARTNERSHIP AID</h2>
-            <p>Serving. Quality. Community.</p>
-        </div>
-    </section>
-
-    <section id="about">
-        <a href="https://pcmc.sumupstore.com/"><button>Donate</button></a>
-        <h2>Feeding People in Communities across London</h2>
-        <p><b>PCM Response to Covid-19:</b> In 2020, PCMC scaled up its Covid-19 response to the pandemic by working
-            with Felix Project and City Harvest to deliver food to families and local charities across Brent. Since the
-            start of the pandemic, we have handed out over 30,000 meals and at least 800 meals in a week alone. We have
-            handed out nearly 100 cases of food to local primary schools, food banks, and local groups. We know times are
-            hard right now, but we also want people to know that we care.</p>
-    </section>
-
-    <section id="services">
-        <h2>What we do</h2>
-        <!-- Slick slider for services -->
-        <div class="service-slider">
-            <div><img src="./PCMC FOOD AIDD.png" alt="Service Image 1"></div>
-            <div><img src="./1a721fb2-6804-40a4-a636-978de322fc64 (1).jpeg" alt="Service Image 2"></div>
-            <div><img src="./1a721fb2-6804-40a4-a636-978de322fc64.jpeg" alt="Service Image 3"></div>
-            <div><img src="./b065bbea-a1ec-48a9-a909-206c986cc97a.jpeg" alt="Service Image 4"></div>
-            <div><img src="./team.jpeg" alt="Service Image 4"></div>
-            
-        </div>
-        <p>We offer various services to assist those facing food insecurity.</p>
-        <h3>Our food parcels supplied across our network contain at least three days’ worth of nutritionally balanced
-            meals for individuals and families.</h3>
-        <table>
-            <!-- ... Existing table content ... -->
-        </table>
-        <p>We also provide essential non-food items like toiletries and hygiene products where possible.</p>
-    </section>
-
-    <section id="donate">
-        <div>
-            <img src="./donate to us.png" alt="Donate to Us">
-        </div>
-        <div>
-            <p>Support our cause by making a donation.</p>
-            <form id="donationForm">
-            <label for="amount">Select or Enter Amount:</label>
-            <div class="amount-buttons">
-                <button type="button" onclick="setAmount(20)">£20</button>
-                <button type="button" onclick="setAmount(50)">£50</button>
-                <button type="button" onclick="setAmount(100)">£100</button>
-                <button type="button" onclick="setAmount(500)">£500</button>
+            style="background-image: url('https://images.squarespace-cdn.com/content/v1/59bba9cd2278e70b1981931d/1522186133425-ZLV12EB54OFSXCA3IAE1/South-London-Stories-The-Foodbank-James-Hopkirk-002.jpg'); background-size: cover; color: #fff;">
+            <div class="home">
+                <h2>FOOD PARTNERSHIP AID</h2>
+                <p>Serving. Quality. Community.</p>
+                <a href="https://pcmc.sumupstore.com/" class="cta-button">Donate Now</a>
             </div>
-            <input type="text" id="amount" name="amount" placeholder="Enter any amount" required>
-            
-            <!-- Stripe Elements container -->
-            <div id="card-element"></div>
-    
-            <!-- Display payment errors -->
-            <div id="card-errors" role="alert"></div>
-    
-            <button id="submit">Donate</button>
-            
-            <!-- Validation message for donation form -->
-            <div class="validation-message" id="donationValidationMessage"></div>
-        </div>
-    </form>
-    </section>
-    
-    
+        </section>
 
-    <!-- News Feeds Display Section -->
-    <section id="news-feeds">
-        <h2>News Feeds</h2>
-        <div class="video-container">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/6W1Rz-iMGmk"
-                title="Why is there a high number of Covid 19 related deaths in the BAME Community?" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-                allowfullscreen></iframe>
-        </div>
-        <!-- Add more video embed codes as needed -->
-    </section>
-    
-    <section id="contact">
-        <img src="./PCMC FOOD AIDD.png" alt="">
-        <!-- Make the contact information a button -->
-        <button onclick="contactUs()">Contact Us</button>
-    </section>
+        <section id="about">
+            <!-- <a href="https://pcmc.sumupstore.com/" class="cta-button">Donate</a> -->
+            <h2>Feeding People in Communities across London</h2>
+            <p><b>PCM Response to Covid-19:</b> In 2020, PCMC scaled up its Covid-19 response to the pandemic by working
+                with Felix Project and City Harvest to deliver food to families and local charities across Brent. Since
+                the start of the pandemic, we have handed out over 30,000 meals and at least 800 meals in a week alone.
+                We have handed out nearly 100 cases of food to local primary schools, food banks, and local groups. We
+                know times are hard right now, but we also want people to know that we care.</p>
+        </section>
 
-    <section id="volunteer" style="margin-bottom: 40px;">
-        <h2>Volunteer</h2>
-        <p>Join us as a volunteer and make a difference.</p>
-        <form id="volunteerForm">
+        <section id="services">
+            <h2>What we do</h2>
+            <!-- Slick slider for services -->
+            <div class="service-slider">
+                <div><img src="./PCMC FOOD AIDD.png" alt="Service Image 1"></div>
+                <div><img src="./1a721fb2-6804-40a4-a636-978de322fc64 (1).jpeg" alt="Service Image 2"></div>
+                <div><img src="./1a721fb2-6804-40a4-a636-978de322fc64.jpeg" alt="Service Image 3"></div>
+                <div><img src="./b065bbea-a1ec-48a9-a909-206c986cc97a.jpeg" alt="Service Image 4"></div>
+                <div><img src="./team.jpeg" alt="Service Image 4"></div>
+            </div>
+            <p>We offer various services to assist those facing food insecurity.</p>
+            <h3>Our food parcels supplied across our network contain at least three days’ worth of nutritionally balanced
+                meals for individuals and families.</h3>
+            <table>
+                <!-- ... Existing table content ... -->
+            </table>
+            <p>We also provide essential non-food items like toiletries and hygiene products where possible.</p>
+        </section>
+
+        <section id="donate">
             <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <div class="validation-message" id="nameValidationMessage"></div>
+                <img src="./donate to us.png" alt="Donate to Us">
             </div>
             <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <div class="validation-message" id="emailValidationMessage"></div>
+                <p>Support our cause by making a donation.</p>
+                <form id="donationForm">
+                    <label for="amount">Select or Enter Amount:</label>
+                    <div class="amount-buttons">
+                        <button type="button" onclick="setAmount(20)">£20</button>
+                        <button type="button" onclick="setAmount(50)">£50</button>
+                        <button type="button" onclick="setAmount(100)">£100</button>
+                        <button type="button" onclick="setAmount(500)">£500</button>
+                    </div>
+                    <input type="text" id="amount" name="amount" placeholder="Enter any amount" required>
+
+                    <!-- Stripe Elements container -->
+                    <div id="card-element"></div>
+
+                    <!-- Display payment errors -->
+                    <div id="card-errors" role="alert"></div>
+
+                    <button id="submit" class="cta-button">Donate</button>
+
+                    <!-- Validation message for donation form -->
+                    <div class="validation-message" id="donationValidationMessage"></div>
+                </form>
             </div>
-            <input type="submit" value="Sign Up">
-            <!-- Validation message for volunteer form -->
-            <div class="validation-message" id="volunteerValidationMessage"></div>
-        </form>
-    </section>
+        </section>
+
+        <!-- News Feeds Display Section -->
+        <section id="news-feeds">
+            <h2>News Feeds</h2>
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/6W1Rz-iMGmk"
+                    title="Why is there a high number of Covid 19 related deaths in the BAME Community?" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                    allowfullscreen></iframe>
+            </div>
+            <!-- Add more video embed codes as needed -->
+        </section>
+
+        <section id="contact">
+            <img src="./PCMC FOOD AIDD.png" alt="">
+            <!-- Make the contact information a button -->
+            <button onclick="contactUs()" class="cta-button">Contact Us</button>
+        </section>
+
+        <section id="volunteer" style="margin-bottom: 40px;">
+            <h2>Volunteer</h2>
+            <p>Join us as a volunteer and make a difference.</p>
+            <form id="volunteerForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="validation-message" id="nameValidationMessage"></div>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="validation-message" id="emailValidationMessage"></div>
+                </div>
+                <input type="submit" value="Sign Up" class="cta-button">
+                <!-- Validation message for volunteer form -->
+                <div class="validation-message" id="volunteerValidationMessage"></div>
+            </form>
+        </section>
     </main>
 
     <div class="footer">
@@ -159,7 +343,7 @@
                 <h2>STAY IN TOUCH</h2>
                 <p>Keep up to date on our work and ways that you can get involved.</p>
                 <div class="socials">
-                   <a href="#volunteer"><button class="join">Join Us Today</button></a> 
+                    <a href="#volunteer" class="cta-button">Join Us Today</a>
                     <button class="facebook">Facebook</button>
                     <button class="instagram">Instagram</button>
                     <button class="twitter">Twitter</button>
@@ -178,12 +362,12 @@
                     <p><a href="#about">About Us</a></p>
                     <p><a href="#services">What we do</a></p>
                     <p><a href="./contact us.html">Contact Us</a></p>
-                    <p><a href="#donate">Donate Money</a></p>
+                    <p><a href="#donate" class="cta-button">Donate Money</a></p>
                 </div>
             </div>
             <p>&copy; 2023 PCMC Food Partnership Aid. All rights reserved. Charitable Number: 1131745.</p>
         </footer>
-        
+
     </div>
 
     <script src="script.js"></script>
