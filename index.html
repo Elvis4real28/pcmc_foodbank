@@ -5,31 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
-    <!-- Add this link to include the Slick slider CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
-    
-    <!-- Add these script tags directly in the head section of your HTML -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" loading="lazy"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" loading="lazy"></script>
-
-<!-- stripe for payment -->
-    <!-- Add this script tag after the jQuery script tag -->
     <script src="https://js.stripe.com/v3/" loading="lazy"></script>
-<script>
-  var stripe = Stripe('pk_test_51OR7MgGK5ROpFNQVh2Yhv0gm1V4ypesV6uBGFRUaKRGjZgpDkFgcGjVOYfQhc8FSVcPN7qHtdFGrSI2ImbfCVHiD00eEQBdRNK');
-</script>
-
-    <!-- Add Google Maps API script -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVi0TbvN06i9Btl2PnpBqTg-Glscy0joI&initMap=initMap"></script>
-
-    <!-- Add a CSS class for the Google Map container -->
-    <style>
-        #map {
-            height: 300px;
-            /* Adjust the height as needed */
-            margin-bottom: 20px;
-        }
-    </style>
+    <script>
+        var stripe = Stripe('pk_test_51OR7MgGK5ROpFNQVh2Yhv0gm1V4ypesV6uBGFRUaKRGjZgpDkFgcGjVOYfQhc8FSVcPN7qHtdFGrSI2ImbfCVHiD00eEQBdRNK');
+    </script>
 
     <title>PCMC Food Aid Partnership</title>
 </head>
@@ -38,35 +21,30 @@
     <a class="skip-link" href="#main-content">Skip to Content</a>
     <header>
         <div id="logo">
-            <img src="./logo2.png" alt="UK Food Bank Logo">
+            <img src="./logo2.png" alt="PCMC Food Bank Logo">
         </div>
-        <!-- <h1>UK Food Bank</h1> -->
         <nav id="navMenu" class="nav">
-            <!-- Update the burgerMenu div to make it focusable -->
-            <div id="burgerMenu" tabindex="0" role="button" aria-label="Toggle Menu" aria-labelledby="burgerMenuLabel" onclick="toggleMenu()" onKeyPress="toggleMenuKeyPress(event)">
+            <div id="burgerMenu" tabindex="0" role="button" aria-label="Toggle Menu" aria-labelledby="burgerMenuLabel"
+                onclick="toggleMenu()" onKeyPress="toggleMenuKeyPress(event)">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
 
-<!-- Add the role and aria-haspopup attributes for accessibility -->
-<ul role="menu" aria-label="Main Menu">
-
-<!-- Add tabindex, role, and aria-haspopup attributes for accessibility -->
-<li tabindex="0" role="menuitem" aria-current="page"><a href="#home">Home</a></li>
-<li tabindex="0" role="menuitem" aria-current="page"><a href="#about">About Us</a></li>
-<li tabindex="0" role="menuitem" aria-current="page"><a href="#services">Services</a></li>
-<li tabindex="0" role="menuitem" aria-current="page"><a href="./contact us.html">Contact Us</a></li>
-<li tabindex="0" role="menuitem" aria-current="page"><a href="#donate">Donate</a></li>
-<li tabindex="0" role="menuitem" aria-current="page"><a href="#volunteer">Volunteer</a></li>
-</ul>
-
+            <ul role="menu" aria-label="Main Menu">
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="#home">Home</a></li>
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="#about">About Us</a></li>
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="#services">Services</a></li>
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="./contact us.html">Contact Us</a></li>
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="#donate">Donate</a></li>
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="#volunteer">Volunteer</a></li>
+            </ul>
         </nav>
     </header>
     <hr>
 
     <main>
-    <section id="home"
+        <section id="home"
         style="background-image: url('https://images.squarespace-cdn.com/content/v1/59bba9cd2278e70b1981931d/1522186133425-ZLV12EB54OFSXCA3IAE1/South-London-Stories-The-Foodbank-James-Hopkirk-002.jpg'); background-size: cover; color: #fff;">
         <div class="home">
             <h2>FOOD PARTNERSHIP AID</h2>
@@ -88,9 +66,12 @@
         <h2>What we do</h2>
         <!-- Slick slider for services -->
         <div class="service-slider">
-            <div><img src="./1a721fb2-6804-40a4-a636-978de322fc64 (1).jpeg" alt="Service Image 1"></div>
-            <div><img src="./1a721fb2-6804-40a4-a636-978de322fc64.jpeg" alt="Service Image 2"></div>
-            <div><img src="./b065bbea-a1ec-48a9-a909-206c986cc97a.jpeg" alt="Service Image 3"></div>
+            <div><img src="./PCMC FOOD AIDD.png" alt="Service Image 1"></div>
+            <div><img src="./1a721fb2-6804-40a4-a636-978de322fc64 (1).jpeg" alt="Service Image 2"></div>
+            <div><img src="./1a721fb2-6804-40a4-a636-978de322fc64.jpeg" alt="Service Image 3"></div>
+            <div><img src="./b065bbea-a1ec-48a9-a909-206c986cc97a.jpeg" alt="Service Image 4"></div>
+            <div><img src="./team.jpeg" alt="Service Image 4"></div>
+            
         </div>
         <p>We offer various services to assist those facing food insecurity.</p>
         <h3>Our food parcels supplied across our network contain at least three days’ worth of nutritionally balanced
@@ -146,10 +127,7 @@
     </section>
     
     <section id="contact">
-        
-        <!-- Google Map container -->
-        <div id="map"></div>
-
+        <img src="./PCMC FOOD AIDD.png" alt="">
         <!-- Make the contact information a button -->
         <button onclick="contactUs()">Contact Us</button>
     </section>
@@ -173,8 +151,7 @@
             <div class="validation-message" id="volunteerValidationMessage"></div>
         </form>
     </section>
-    
-   
+    </main>
 
     <div class="footer">
         <div class="footer-content">
@@ -208,27 +185,8 @@
         </footer>
         
     </div>
-</main>
-
-
-
 
     <script src="script.js"></script>
-    <script>
-        function initMap() {
-            var mapOptions = {
-                center: { lat: 51.5272, lng: -0.2267 },
-                zoom: 14,
-            };
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    
-            var marker = new google.maps.Marker({
-                position: { lat: 51.5272, lng: -0.2267 },
-                map: map,
-                title: 'PCMC Food Aid Partnership'
-            });
-        }
-    </script>
 </body>
 
 </html>
