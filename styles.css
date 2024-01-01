@@ -118,7 +118,7 @@ hr {
 #about button {
     float: right;
     color: #fff;
-    background-color: #FF5436;
+    background-color: #a93420;
 }
 
 #about button {
@@ -304,12 +304,12 @@ color: #126FB5;
 
 
 .footer .facebook {
-    background-color: #FF5436;
+    background-color: #3B5998;
     color: #FFFFFF;
 }
 
 .footer .instagram {
-    background-color: #3B5998;
+    background-color: #E4405F;
     color: #FFFFFF;
 }
 
@@ -403,6 +403,7 @@ nav a:hover, nav a:focus {
 
     .bar {
         background-color: #333;
+        margin-right: 20px;
     }
 
     nav ul {
@@ -488,10 +489,14 @@ nav a:hover, nav a:focus {
     }
 
     #home .cta-button{
-        width: 27.5%; /* Make CTA buttons full width on smaller screens */
+        width: 35%; /* Make CTA buttons full width on smaller screens */
         margin-top: 10px; /* Add margin for better spacing */
         justify-content: center;
         text-align: center;
+    }
+
+    #volunteer .cta-button {
+        width: 100%;
     }
 
     footer .oursections .cta-button {
