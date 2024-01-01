@@ -396,9 +396,13 @@ nav a:hover, nav a:focus {
 
 /* Responsive Design */
 @media only screen and (max-width: 600px) {
+   #navMenu{
+    margin-right: 20px;
+   }
+   
     #burgerMenu {
         display: flex;
-        margin-right: 20px;
+        /* margin-right: 20px; */
     }
 
     .bar {
