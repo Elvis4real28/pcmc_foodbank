@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
-
-     
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" loading="lazy"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" loading="lazy"></script>
-    <script src="https://js.stripe.com/v3/" loading="lazy"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" loading="lazy"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" loading="lazy"></script>
+        <script src="https://js.stripe.com/v3/" loading="lazy"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    
     <script>
         var stripe = Stripe('pk_test_51OR7MgGK5ROpFNQVh2Yhv0gm1V4ypesV6uBGFRUaKRGjZgpDkFgcGjVOYfQhc8FSVcPN7qHtdFGrSI2ImbfCVHiD00eEQBdRNK');
+        
+        // Wait for the DOM to be ready before initializing AOS
+        // Initialize AOS with desired options.
+            // You can customize the data-aos attribute value based on the available AOS animation options (e.g., fade, fade-up, fade-down, fade-left, fade-right, etc.).
+           
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800, // Duration of animations (in milliseconds)
+                easing: 'ease-in-out', // Type of easing
+                once: true, // Only animate elements once
+            });
+        });
     </script>
+    
 
-    <title>PCMC Food Aid Partnership</title>
-</head>
 
+        <title>PCMC Food Aid Partnership</title>
+    </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to Content</a>
     <header>
@@ -48,8 +61,7 @@
     <hr>
 
     <main>
-        <section id="home"
-            style="background-image: url('https://images.squarespace-cdn.com/content/v1/59bba9cd2278e70b1981931d/1522186133425-ZLV12EB54OFSXCA3IAE1/South-London-Stories-The-Foodbank-James-Hopkirk-002.jpg'); background-size: cover; color: #fff;">
+        <section id="home" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59bba9cd2278e70b1981931d/1522186133425-ZLV12EB54OFSXCA3IAE1/South-London-Stories-The-Foodbank-James-Hopkirk-002.jpg'); background-size: cover; color: #fff;" data-aos="fade-up">
             <div class="home">
                 <h2>FOOD PARTNERSHIP AID</h2>
                 <p>Serving. Quality. Community.</p>
@@ -57,7 +69,7 @@
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" data-aos="fade-up">
             <!-- <a href="https://pcmc.sumupstore.com/" class="cta-button">Donate</a> -->
             <h2>Feeding People in Communities across London</h2>
             <p><b>PCM Response to Covid-19:</b> In 2020, PCMC scaled up its Covid-19 response to the pandemic by working
@@ -67,7 +79,7 @@
                 know times are hard right now, but we also want people to know that we care.</p>
         </section>
 
-        <section id="services">
+        <section id="services" data-aos="fade-up">
             <h2>What we do</h2>
             <!-- Slick slider for services -->
             <div class="service-slider">
@@ -84,7 +96,7 @@
             <p>We also provide essential non-food items like toiletries and hygiene products where possible.</p>
         </section>
 
-        <section id="donate">
+        <section id="donate" data-aos="fade-up">
             <div>
                 <img src="./donate to us.png" alt="Donate to Us">
             </div>
@@ -115,7 +127,7 @@
         </section>
 
         <!-- News Feeds Display Section -->
-        <section id="news-feeds">
+        <section id="news-feeds" data-aos="fade-up">
             <h2>News Feeds</h2>
             <div class="video-container">
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/6W1Rz-iMGmk"
@@ -126,13 +138,13 @@
             <!-- Add more video embed codes as needed -->
         </section>
 
-        <section id="contact">
+        <section id="contact" data-aos="fade-up">
             <img src="./PCMC FOOD AIDD.png" alt="">
             <!-- Make the contact information a button -->
             <button onclick="contactUs()" class="cta-button">Contact Us</button>
         </section>
 
-        <section id="volunteer" style="margin-bottom: 40px;">
+        <section id="volunteer" style="margin-bottom: 40px;" data-aos="fade-up">
             <h2>Volunteer</h2>
             <p>Join us as a volunteer and make a difference.</p>
             <form id="volunteerForm">
@@ -187,6 +199,7 @@
     </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
