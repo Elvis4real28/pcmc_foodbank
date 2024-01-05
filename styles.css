@@ -54,6 +54,10 @@ nav {
     align-items: center;
 }
 
+#navMenu ul {
+    margin-bottom: 20px;
+}
+
 /* Add a focus style for navigation links */
 nav a:focus ,#about button {
     background-color: #555;
@@ -61,7 +65,7 @@ nav a:focus ,#about button {
 }
 
 #home .home h2,#home .home p {
-    color: #0A368F;
+    color: #FFFFFF;
 }
 
 #burgerMenu {
