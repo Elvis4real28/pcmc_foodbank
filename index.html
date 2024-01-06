@@ -50,12 +50,44 @@
 
             <ul role="menu" aria-label="Main Menu">
                 <li tabindex="0" role="menuitem" aria-current="page"><a href="#home">Home</a></li>
-                <li tabindex="0" role="menuitem" aria-current="page"><a href="#about">About Us</a></li>
-                <li tabindex="0" role="menuitem" aria-current="page"><a href="#services">Services</a></li>
-                <li tabindex="0" role="menuitem" aria-current="page"><a href="./contact us.html">Contact Us</a></li>
-                <li tabindex="0" role="menuitem" aria-current="page"><a href="#donate" class="cta-button">Donate</a></li>
-                <li tabindex="0" role="menuitem" aria-current="page"><a href="#volunteer" class="cta-button">Volunteer</a></li>
+ <li tabindex="0" role="menuitem" aria-current="page">
+             <a href="#about">About Us</a>
+            <!-- Sub-sections for About Us -->
+            <ul>
+            <li><a href="#history">History</a></li>
+            <li><a href="#team">Our Team</a></li>
+             <li><a href="#mission">Mission and Vision</a></li>
             </ul>
+           </li>
+
+           <li tabindex="0" role="menuitem" aria-current="page">
+            <a href="#services">What We Do</a>
+            <!-- Sub-sections for Services -->
+            <ul>
+                <li><a href="#service1">Food Aid</a></li>
+                <li><a href="#service2">Service 2</a></li>
+                <li><a href="#service3">Service 3</a></li>
+            </ul>
+
+            <li tabindex="0" role="menuitem" aria-current="page"><a href="#food-collection">Food Collection</a>
+            <ul>
+            <li><a href="#individual-registration">Individual Registration</a></li>
+            <li><a href="#group-registration">Group Registration</a></li>
+            </ul>
+        </li>
+                    <li tabindex="0" role="menuitem" aria-current="page">
+                        <a href="#get-involved">Get Involved</a>
+                        <!-- Sub-sections for Get Involved -->
+                        <ul>
+                            <li><a href="#donate">Donate</a></li>
+                            <li><a href="#volunteer">Volunteer</a></li>
+                            <li><a href="#socials"> Social Media</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li tabindex="0" role="menuitem" aria-current="page"><a href="#news-feeds"> News Feeds</a></li>
+
+           </ul>
         </nav>
     </header>
     <hr>
@@ -136,7 +168,45 @@
                     allowfullscreen></iframe>
             </div>
             <!-- Add more video embed codes as needed -->
-        </section>
+            <!-- twitter page feed -->
+            <a class="twitter-timeline" href="https://twitter.com/iamteajazz" data-tweet-limit="3" data-chrome="noheader nofooter noborders transparent"></a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <!-- Facebook Page Feed -->
+    <div class="fb-page" data-href="https://www.facebook.com/iamteajazz" data-tabs="timeline" data-width="500" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/iamteajazz" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/iamteajazz">Your Facebook Page Name</a>
+        </blockquote>
+    </div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="YOUR_NONCE_VALUE"></script>
+
+    <!-- YouTube Channel Feed -->
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed?listType=user_uploads&list=YourChannelID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        
+    <!-- Instagram Feed Integration:
+    Note: Instagram doesn't provide an official embed widget for timeline feeds. You might need to use third-party services that offer Instagram feed embedding. -->
+    
+        <!-- Hypothetical Instagram Feed -->
+        <div id="instafeed"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+        <script>
+            var feed = new Instafeed({
+                get: 'user',
+                userId: 'YourInstagramUserID',
+                accessToken: 'YourInstagramAccessToken',
+                limit: 3,
+                resolution: 'standard_resolution',
+                template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
+            });
+            feed.run();
+        </script>
+
+<!-- Replace "YourInstagramUserID" and "YourInstagramAccessToken" with your Instagram User ID and Access Token. Please note that Instagram's API access might require additional steps due to their policies.
+
+Remember to replace placeholders with your actual social media account information. Always refer to the official documentation of each social media platform for the most accurate and up-to-date instructions. -->
+        
+</section>
 
         <section id="contact" data-aos="fade-up">
             <img src="./PCMC FOOD AIDD.png" alt="">
