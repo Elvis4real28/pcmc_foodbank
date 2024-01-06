@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-....." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" loading="lazy"></script>
         <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" loading="lazy"></script>
@@ -14,9 +16,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     
     
-    <script>
-        var stripe = Stripe('pk_test_51OR7MgGK5ROpFNQVh2Yhv0gm1V4ypesV6uBGFRUaKRGjZgpDkFgcGjVOYfQhc8FSVcPN7qHtdFGrSI2ImbfCVHiD00eEQBdRNK');
-        
+    <script>        
         // Wait for the DOM to be ready before initializing AOS
         // Initialize AOS with desired options.
             // You can customize the data-aos attribute value based on the available AOS animation options (e.g., fade, fade-up, fade-down, fade-left, fade-right, etc.).
@@ -40,62 +40,80 @@
         <div id="logo">
             <a href="#"><img src="./logo2.png" alt="UK Food Bank Logo"></a>  
         </div>
+        <div class="social-icons">
+            <!-- Facebook Icon -->
+            <a href="https://www.facebook.com/YourFacebookPage" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <!-- YouTube Icon -->
+            <a href="https://www.youtube.com/YourYouTubeChannel" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/YourInstagramPage" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
         <nav id="navMenu" class="nav">
-            <div id="burgerMenu" tabindex="0" role="button" aria-label="Toggle Menu" aria-labelledby="burgerMenuLabel"
-                onclick="toggleMenu()" onKeyPress="toggleMenuKeyPress(event)">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-
+            <nav id="navMenu" class="nav">
+                <div id="burgerMenu" tabindex="0" role="button" aria-label="Toggle Menu" aria-labelledby="burgerMenuLabel"
+                    onclick="toggleMenu()" onKeyPress="toggleMenuKeyPress(event)">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             <ul role="menu" aria-label="Main Menu">
                 <li tabindex="0" role="menuitem" aria-current="page"><a href="#home">Home</a></li>
- <li tabindex="0" role="menuitem" aria-current="page">
-             <a href="#about">About Us</a>
-            <!-- Sub-sections for About Us -->
-            <ul>
-            <li><a href="#history">History</a></li>
-            <li><a href="#team">Our Team</a></li>
-             <li><a href="#mission">Mission and Vision</a></li>
-            </ul>
-           </li>
+                <li tabindex="0" role="menuitem" aria-current="page">
+                    <a href="#about">About Us <i class="fas fa-angle-down"></i></a>
+                    <!-- Sub-sections for About Us -->
+                    <ul>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#mission">Mission and Vision</a></li>
+                    </ul>
+                </li>
+                
+                <li tabindex="0" role="menuitem" aria-current="page">
+                    <a href="#services">What We Do <i class="fas fa-angle-down"></i></a>
+                    <!-- Sub-sections for Services -->
+                    <ul>
+                        <li><a href="#service1">Food Aid</a></li>
+                        <li><a href="#service2">Service 2</a></li>
+                        <li><a href="#service3">Service 3</a></li>
+                    </ul>
+                </li>
+                <li tabindex="0" role="menuitem" aria-current="page">
+                    <a href="#food-collection">Food Collection <i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li><a href="./individual-registration.html">Individual Registration</a></li>
+                        <li><a href="./group-registration.html">Group Registration</a></li>
+                    </ul>
+                </li>                
 
-           <li tabindex="0" role="menuitem" aria-current="page">
-            <a href="#services">What We Do</a>
-            <!-- Sub-sections for Services -->
-            <ul>
-                <li><a href="#service1">Food Aid</a></li>
-                <li><a href="#service2">Service 2</a></li>
-                <li><a href="#service3">Service 3</a></li>
+                <li tabindex="0" role="menuitem" aria-current="page">
+                    <a href="#get-involved">Get Involved <i class="fas fa-angle-down"></i></a>
+                    <!-- Sub-sections for Get Involved -->
+                    <ul>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="#socials"> Social Media</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </li>
+                
+    
+                <li tabindex="0" role="menuitem" aria-current="page"><a href="#news-feeds"> News Feeds</a></li>
             </ul>
-
-            <li tabindex="0" role="menuitem" aria-current="page"><a href="#food-collection">Food Collection</a>
-            <ul>
-            <li><a href="#individual-registration">Individual Registration</a></li>
-            <li><a href="#group-registration">Group Registration</a></li>
-            </ul>
-        </li>
-                    <li tabindex="0" role="menuitem" aria-current="page">
-                        <a href="#get-involved">Get Involved</a>
-                        <!-- Sub-sections for Get Involved -->
-                        <ul>
-                            <li><a href="#donate">Donate</a></li>
-                            <li><a href="#volunteer">Volunteer</a></li>
-                            <li><a href="#socials"> Social Media</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
-                        </ul>
-                    </li>
-                    <li tabindex="0" role="menuitem" aria-current="page"><a href="#news-feeds"> News Feeds</a></li>
-
-           </ul>
         </nav>
+       
     </header>
     <hr>
 
     <main>
         <section id="home" style="background-image: url('https://images.squarespace-cdn.com/content/v1/59bba9cd2278e70b1981931d/1522186133425-ZLV12EB54OFSXCA3IAE1/South-London-Stories-The-Foodbank-James-Hopkirk-002.jpg'); background-size: cover; color: #fff;" data-aos="fade-up">
             <div class="home">
-                <h2>FOOD PARTNERSHIP AID</h2>
+                <h2>FOOD AID PARTNERSHIP</h2>
                 <p>Serving. Quality. Community.</p>
                 <a href="https://pcmc.sumupstore.com/" class="cta-button">Donate Now</a>
             </div>
@@ -120,12 +138,12 @@
                 <div><img src="./b065bbea-a1ec-48a9-a909-206c986cc97a.jpeg" alt="Service Image 4"></div>
             </div>
             <p>We offer various services to assist those facing food insecurity.</p>
-            <h3>Our food parcels supplied across our network contain at least three days’ worth of nutritionally balanced
-                meals for individuals and families.</h3>
+            
             <table>
-                <!-- ... Existing table content ... -->
+                <!-- <h3>Our food parcels supplied across our network contain at least three days’ worth of nutritionally balanced
+                meals for individuals and families.</h3>
+                <p>We also provide essential non-food items like toiletries and hygiene products where possible.</p> -->
             </table>
-            <p>We also provide essential non-food items like toiletries and hygiene products where possible.</p>
         </section>
 
         <section id="donate" data-aos="fade-up">
@@ -134,27 +152,7 @@
             </div>
             <div>
                 <p>Support our cause by making a donation.</p>
-                <form id="donationForm">
-                    <label for="amount">Select or Enter Amount:</label>
-                    <div class="amount-buttons">
-                        <button type="button" onclick="setAmount(20)">£20</button>
-                        <button type="button" onclick="setAmount(50)">£50</button>
-                        <button type="button" onclick="setAmount(100)">£100</button>
-                        <button type="button" onclick="setAmount(500)">£500</button>
-                    </div>
-                    <input type="text" id="amount" name="amount" placeholder="Enter any amount" required>
-
-                    <!-- Stripe Elements container -->
-                    <div id="card-element"></div>
-
-                    <!-- Display payment errors -->
-                    <div id="card-errors" role="alert"></div>
-
-                    <button id="submit" class="cta-button">Donate</button>
-
-                    <!-- Validation message for donation form -->
-                    <div class="validation-message" id="donationValidationMessage"></div>
-                </form>
+                <a href="https://pcmc.sumupstore.com/" class="cta-button">Donate Now</a>
             </div>
         </section>
 
@@ -167,11 +165,11 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                     allowfullscreen></iframe>
             </div>
-            <!-- Add more video embed codes as needed -->
-            <!-- twitter page feed -->
-            <a class="twitter-timeline" href="https://twitter.com/iamteajazz" data-tweet-limit="3" data-chrome="noheader nofooter noborders transparent"></a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <!-- YouTube Channel Feed -->
+    <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed?listType=user_uploads&list=UCvr7VtAiNxiajrwhK_wLV7A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
+            <!-- Add more video embed codes as needed -->
+            
             <!-- Facebook Page Feed -->
     <div class="fb-page" data-href="https://www.facebook.com/iamteajazz" data-tabs="timeline" data-width="500" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
         <blockquote cite="https://www.facebook.com/iamteajazz" class="fb-xfbml-parse-ignore">
@@ -179,10 +177,6 @@
         </blockquote>
     </div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="YOUR_NONCE_VALUE"></script>
-
-    <!-- YouTube Channel Feed -->
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed?listType=user_uploads&list=UCvr7VtAiNxiajrwhK_wLV7A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
         
     <!-- Instagram Feed Integration:
     Note: Instagram doesn't provide an official embed widget for timeline feeds. You might need to use third-party services that offer Instagram feed embedding. -->
@@ -251,7 +245,7 @@ Remember to replace placeholders with your actual social media account informati
         <footer>
             <div class="footer">
                 <div class="pcmcfood">
-                    <h1>PCMC FOOD PARTNERSHIP AID</h1>
+                    <h1>PCMC FOOD AID PARTNERSHIP</h1>
                     <p>We provide emergency food, support and advice to local people experiencing financial hardship.</p>
                     <p>2 Scrubs Lane, College Park, London NW10 6RB, United Kingdom.</p>
                     <p>Info@pcmc.org.uk</p>
@@ -260,10 +254,11 @@ Remember to replace placeholders with your actual social media account informati
                     <p><a href="#about">About Us</a></p>
                     <p><a href="#services">What we do</a></p>
                     <p><a href="./contact us.html">Contact Us</a></p>
-                    <p><a href="#donate" class="cta-button">Donate Money</a></p>
+                    <p><a href="https://pcmc.sumupstore.com/" class="cta-button">Donate Now</a>                    </p>
                 </div>
             </div>
-            <p>&copy; 2023 PCMC Food Partnership Aid. All rights reserved. Charitable Number: 1131745.</p>
+            <p>&copy; 2023 PCMC Food Aid Partnership . All rights reserved. Charitable Number: 1131745.</p>
+            <div class="dev"><p>Site Developed By Tustenable.</p></div>
         </footer>
 
     </div>
