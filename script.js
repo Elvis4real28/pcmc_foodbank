@@ -1,3 +1,5 @@
+
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -32,58 +34,7 @@ document.querySelectorAll('.nav a').forEach(link => {
     });
 });
 
-// Create a Stripe client
-var stripe = Stripe('pk_test_51OR7MgGK5ROpFNQVh2Yhv0gm1V4ypesV6uBGFRUaKRGjZgpDkFgcGjVOYfQhc8FSVcPN7qHtdFGrSI2ImbfCVHiD00eEQBdRNK');
 
-// Create an instance of Elements
-var elements = stripe.elements();
-
-// Create an instance of the card Element
-var card = elements.create('card');
-
-// Add an instance of the card Element to the card-element div
-card.mount('#card-element');
-
-// Handle real-time validation errors from the card Element
-card.addEventListener('change', function (event) {
-    // Display validation errors or clear the error message
-    var displayError = document.getElementById('card-errors');
-    displayError.textContent = event.error ? event.error.message : '';
-});
-
-// Form validation for donation form
-document.getElementById('donationForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    // Get donation amount and card element
-    var amount = document.getElementById('amount').value;
-    var cardElement = elements.getElement('card');
-
-    // Create a token and handle the result
-    stripe.createToken(cardElement).then(function (result) {
-        handleTokenResult(result, amount);
-    });
-});
-
-// Function to handle the result of creating a token
-function handleTokenResult(result, amount) {
-    if (result.error) {
-        // Display error message if token creation fails
-        var errorElement = document.getElementById('card-errors');
-        errorElement.textContent = result.error.message;
-    } else {
-        // Process the token on the server (replace this with actual server-side processing)
-        alert('Thank you for your donation of £' + amount + '!');
-
-        // Reset the form
-        document.getElementById('donationForm').reset();
-    }
-}
-
-// Function to set the donation amount when clicking on suggestion buttons
-function setAmount(amount) {
-    document.getElementById('amount').value = amount;
-}
 
 // Form validation for volunteer sign-up form
 document.getElementById('volunteerForm').addEventListener('submit', function (e) {
