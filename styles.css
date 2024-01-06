@@ -96,6 +96,27 @@ nav ul li {
     font-size: xx-large;
 }
 
+
+/* Style for sub-menu */
+.nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Set background color for the sub-menu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for sub-menu items */
+.nav ul ul li {
+    display: block;
+    padding: 10px;
+}
+
+/* Show sub-menu on hover */
+.nav ul li:hover > ul {
+    display: block;
+}
+
+
 .nav a {
     text-decoration: none;
     color: #333;
@@ -114,6 +135,8 @@ nav a {
     font-weight: bold;
     font-size: large;
 }
+
+
 
 hr {
     height: 13px;
