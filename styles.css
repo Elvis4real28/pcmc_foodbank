@@ -401,8 +401,9 @@ footer .oursections a{
     color: #fff;
 }
 
+
 .footer .cta-button {
-    width: 80%; /* Make CTA buttons full width on smaller screens */
+    width: 10%; /* Make CTA buttons full width on smaller screens */
     margin-top: 10px; /* Add margin for better spacing */
     justify-content: center;
     text-align: center;
@@ -596,6 +597,11 @@ nav a:hover, nav a:focus {
     .footer .socials {
         flex-direction: column;
         align-items: center;
+    }
+
+    .footer .cta-button {
+        width: 100%; /* Make CTA buttons full width on smaller screens */
+        
     }
 
     .footer .socials a, .footer .socials button {
