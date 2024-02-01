@@ -39,6 +39,7 @@ header {
     width: 100%;
     display: flex;
     z-index: 1000;
+    top: 0px;
 }
 
 .social-icons {
@@ -55,7 +56,7 @@ header {
 
 
 #logo img {
-    max-width: 80px;
+    max-width: 60px;
     height: auto;
 }
 
@@ -103,7 +104,7 @@ nav ul {
 nav ul li {
     margin-right: 20px;
     margin-top: 20px;
-    font-size: xx-large;
+    font-size: large;
 }
 
 
@@ -112,7 +113,7 @@ nav ul li {
     display: none;
     position: absolute;
     background-color: #fff; /* Set background color for the sub-menu */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 /* Style for sub-menu items */
@@ -229,6 +230,50 @@ section {
     width: 100%;
 }
 
+/* Additional CSS for the benefactors section */
+#benefactors {
+    background-color: #f8f8f8;
+    padding: 40px;
+}
+
+#benefactors h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.benefactors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.benefactor {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.benefactor img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+/* Additional CSS for positioning benefactors section */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#donate {
+    flex-basis: 45%; /* Adjust as needed */
+}
+
+#benefactors {
+    flex-basis: 45%; /* Adjust as needed */
+}
+
+
 /* Add this style for the form validation messages */
 .validation-message {
     color: red;
@@ -261,6 +306,21 @@ color: #37a9e2;
     background-color: #37a9e2;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+/* Additional CSS for styling the donate button */
+#donate button {
+    background-color: #37a9e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donate button:hover {
+    background-color: #0056b3;
 }
 
 
@@ -300,6 +360,38 @@ color: #37a9e2;
 #news-feeds h2 {
     color: #37a9e2;
 }
+
+
+/* Add a new style for the container section */
+#news-feeds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust the positioning and styling for the video container */
+.video-container,
+.fb-page {
+    width: 100%; /* Make the container full width */
+    max-width: 800px; /* Limit the maximum width for better readability */
+    margin-bottom: 20px; /* Add margin for spacing between sections */
+}
+
+.video-container iframe {
+    width: 100%; /* Make the embedded video responsive */
+    height: 100%; /* Ensure the video fills the container */
+}
+
+/* Add margin-bottom to other sections to create spacing */
+#about,
+#services,
+#donate,
+#benefactors,
+#contact,
+#volunteer {
+    margin-bottom: 40px;
+}
+
 
 #contact img {
     width: 100%;
@@ -453,15 +545,18 @@ nav a:hover, nav a:focus {
 @media only screen and (max-width: 600px) {
    #navMenu{
     margin-right: 10px;
+    border: none; /* Remove the border line */
+   
+
    }
    
     #burgerMenu {
         display: flex;
-        /* margin-right: 20px; */
+        
     }
 
     .bar {
-        background-color: #333;
+        background-color: #37a9e2;
 
     }
 
@@ -493,10 +588,11 @@ nav a:hover, nav a:focus {
     header {
         padding: 10px;
         justify-content: space-between;
+        top: 0px;
     }
 
     #logo img {
-        width: 60px;
+        width: 50px;
     }
 
     /* Make social icons responsive */
@@ -511,6 +607,7 @@ nav a:hover, nav a:focus {
         margin-left: 0;
         margin-right: 15px; /* Add spacing between icons on small screens */
     }
+
 
     
     nav ul {
@@ -553,6 +650,17 @@ nav a:hover, nav a:focus {
     .service-images a {
         flex-basis: 100%; /* Full width for images on small screens */
     }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #donate,
+    #benefactors {
+        flex-basis: 100%;
+    }
+
 
     .cta-button {
         width: 50%; /* Make CTA buttons full width on smaller screens */
