@@ -101,3 +101,33 @@ function contactUs() {
     // Open the default mail client
     window.location.href = mailtoLink;
 }
+
+
+// Toggle menu function to show/hide the burger menu
+function toggleMenu() {
+    var navMenu = document.querySelector('.nav ul');
+    navMenu.classList.toggle('show');
+}
+
+// Add keyboard navigation support for closing the menu
+function closeMenuKeyPress(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+        closeMenu();
+    }
+}
+
+// Close the menu when the close button is clicked or pressed
+function closeMenu() {
+    var navMenu = document.querySelector('.nav ul');
+    navMenu.classList.remove('show');
+}
+
+// Update the existing code to close the menu when a navigation link is clicked or pressed
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+    link.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            closeMenu();
+        }
+    });
+});
