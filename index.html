@@ -42,7 +42,7 @@
         </div>
         <div class="social-icons">
             <!-- Facebook Icon -->
-            <a href="https://www.facebook.com/YourFacebookPage" target="_blank" title="Facebook">
+            <a href="https://www.facebook.com/pcmcw" target="_blank" title="Facebook">
                 <i class="fab fa-facebook"></i>
             </a>
             <!-- YouTube Icon -->
@@ -50,11 +50,12 @@
                 <i class="fab fa-youtube"></i>
             </a>
             <!-- Instagram Icon -->
-            <a href="https://www.instagram.com/YourInstagramPage" target="_blank" title="Instagram">
+            <a href="https://instagram.com/www.instagram.com/pcmcwc" target="_blank" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
         <nav id="navMenu" class="nav">
+            
             <nav id="navMenu" class="nav">
                 <div id="burgerMenu" tabindex="0" role="button" aria-label="Toggle Menu" aria-labelledby="burgerMenuLabel"
                     onclick="toggleMenu()" onKeyPress="toggleMenuKeyPress(event)">
@@ -129,6 +130,7 @@
                 know times are hard right now, but we also want people to know that we care.</p>
         </section>
 
+        
         <section id="services" data-aos="fade-up">
             <h2>What we do</h2>
             <!-- Slick slider for services -->
@@ -138,7 +140,8 @@
                 <div><img src="./b065bbea-a1ec-48a9-a909-206c986cc97a.jpeg" alt="Service Image 4"></div>
             </div>
             <p>We offer various services to assist those facing food insecurity.</p>
-            
+             <!-- New section for displaying benefactors -->
+  
             <table>
                 <!-- <h3>Our food parcels supplied across our network contain at least three days’ worth of nutritionally balanced
                 meals for individuals and families.</h3>
@@ -146,15 +149,31 @@
             </table>
         </section>
 
-        <section id="donate" data-aos="fade-up">
-            <div>
-                <img src="./donate to us.png" alt="Donate to Us">
-            </div>
-            <div>
-                <p>Support our cause by making a donation.</p>
-                <a href="https://pcmc.sumupstore.com/" target="_blank" class="cta-button">Donate Now</a>
-            </div>
-        </section>
+        <div class="container">
+            <!-- Donate section -->
+            <section id="donate" data-aos="fade-up">
+                <div>
+                    <img src="./donate to us.png" alt="Donate to Us">
+                </div>
+                <p>Help us in our mission by donating today.</p>
+                <a href="https://pcmc.sumupstore.com/" target="_blank"><button>Donate Now</button></a>
+            </section>
+    
+            <!-- Benefactors section -->
+            <section id="benefactors" data-aos="fade-up">
+                <h2>Our Benefactors</h2>
+                <div class="benefactors-container">
+                    <div class="benefactor">
+                        <img src="./hammersmith_and_fulham_council_logo-624x300.png" alt="Hammersmith and Fulham Council">
+                        <p>Hammersmith and Fulham Council</p>
+                    </div>
+                    <div class="benefactor">
+                        <img src="./brent-council-largex5-logo.png" alt="Brent Council">
+                        <p>Brent Council</p>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <!-- News Feeds Display Section -->
         <section id="news-feeds" data-aos="fade-up">
@@ -171,34 +190,14 @@
             <!-- Add more video embed codes as needed -->
             
             <!-- Facebook Page Feed -->
-    <div class="fb-page" data-href="https://www.facebook.com/iamteajazz" data-tabs="timeline" data-width="500" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-        <blockquote cite="https://www.facebook.com/iamteajazz" class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/iamteajazz">Your Facebook Page Name</a>
+    <div class="fb-page" data-href="https://www.facebook.com/pcmcw" data-tabs="timeline" data-width="500" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/pcmcw" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/pcmcw"></a>
         </blockquote>
     </div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="YOUR_NONCE_VALUE"></script>
+    <script async defer crossorigin="anonymous" src="https://www.facebook.com/pcmcw" nonce="YOUR_NONCE_VALUE"></script>
         
-    <!-- Instagram Feed Integration:
-    Note: Instagram doesn't provide an official embed widget for timeline feeds. You might need to use third-party services that offer Instagram feed embedding. -->
-    
-        <!-- Hypothetical Instagram Feed -->
-        <div id="instafeed"></div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
-        <script>
-            var feed = new Instafeed({
-                get: 'user',
-                userId: 'YourInstagramUserID',
-                accessToken: 'YourInstagramAccessToken',
-                limit: 3,
-                resolution: 'standard_resolution',
-                template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
-            });
-            feed.run();
-        </script>
-
-<!-- Replace "YourInstagramUserID" and "YourInstagramAccessToken" with your Instagram User ID and Access Token. Please note that Instagram's API access might require additional steps due to their policies.
-
-Remember to replace placeholders with your actual social media account information. Always refer to the official documentation of each social media platform for the most accurate and up-to-date instructions. -->
+   
         
 </section>
 
@@ -245,9 +244,9 @@ Remember to replace placeholders with your actual social media account informati
         <footer>
             <div class="footer">
                 <div class="pcmcfood">
-                    <h1>PCMC FOOD AID PARTNERSHIP</h1>
+                    <h1> FOOD AID PARTNERSHIP</h1>
                     <p>We provide emergency food, support and advice to local people experiencing financial hardship.</p>
-                    <p>2 Scrubs Lane, College Park, London NW10 6RB, United Kingdom.</p>
+                    <p> 6 Craven Park Harlesden, London NW10 8SY, United Kingdom.</p>
                     <p>Info@pcmc.org.uk</p>
                 </div>
                 <div class="oursections">
@@ -257,7 +256,7 @@ Remember to replace placeholders with your actual social media account informati
                     <p><a href="https://pcmc.sumupstore.com/" target="_blank" class="cta-button">Donate Now</a>                    </p>
                 </div>
             </div>
-            <p>&copy; 2023 PCMC Food Aid Partnership . All rights reserved. Charitable Number: 1131745.</p>
+            <p>&copy; 2024 Food Aid Partnership . All rights reserved. Charitable Number: 1187588.</p>
             <div class="dev"><p>Site Developed By Tustenable.</p></div>
         </footer>
 
